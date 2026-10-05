@@ -1,0 +1,8 @@
+node_modules/
+dist/
+backend/dist/
+web/dist/
+data/terminals.json
+data/wan-state.json
+.env
+.DS_Store

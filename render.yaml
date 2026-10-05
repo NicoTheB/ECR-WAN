@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: showroom-ecr-wan
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /tmp/showroom-ecr
+      - key: TERMINALS
+        sync: false
+      - key: WEB_USERNAME
+        sync: false
+      - key: WEB_PASSWORD
+        sync: false
+      - key: ADMIN_PIN
+        sync: false
+      - key: INTEGRATION_KEY
+        sync: false
+      - key: TERMINAL_SECRET
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      # Per-terminal key/secret environment variables can be used instead of shared credentials.
+      # This service is designed to run as one instance; persistent WAN state is in Supabase.

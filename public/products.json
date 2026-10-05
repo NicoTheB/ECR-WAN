@@ -1,0 +1,76 @@
+{
+  "currency": "DKK",
+  "minorUnitDivisor": 100,
+  "products": [
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "category": "Coffee & tea",
+      "priceMinor": 2800,
+      "description": "Single shot"
+    },
+    {
+      "id": "filter-coffee",
+      "name": "Filter coffee",
+      "category": "Coffee & tea",
+      "priceMinor": 3200,
+      "description": "Freshly brewed"
+    },
+    {
+      "id": "latte",
+      "name": "Latte",
+      "category": "Coffee & tea",
+      "priceMinor": 4500,
+      "description": "Espresso with steamed milk"
+    },
+    {
+      "id": "tea",
+      "name": "Tea",
+      "category": "Coffee & tea",
+      "priceMinor": 2600,
+      "description": "Choose from today's selection"
+    },
+    {
+      "id": "water",
+      "name": "Sparkling water",
+      "category": "Drinks",
+      "priceMinor": 2200,
+      "description": "500 ml"
+    },
+    {
+      "id": "orange-juice",
+      "name": "Orange juice",
+      "category": "Drinks",
+      "priceMinor": 3500,
+      "description": "Chilled juice"
+    },
+    {
+      "id": "sandwich",
+      "name": "Sandwich",
+      "category": "Food",
+      "priceMinor": 7900,
+      "description": "Today's filling"
+    },
+    {
+      "id": "cinnamon-bun",
+      "name": "Cinnamon bun",
+      "category": "Food",
+      "priceMinor": 3600,
+      "description": "Baked in-house"
+    },
+    {
+      "id": "showroom-mug",
+      "name": "Showroom mug",
+      "category": "Merchandise",
+      "priceMinor": 12900,
+      "description": "Ceramic, 300 ml"
+    },
+    {
+      "id": "tote-bag",
+      "name": "Tote bag",
+      "category": "Merchandise",
+      "priceMinor": 8900,
+      "description": "Reusable cotton bag"
+    }
+  ]
+}
