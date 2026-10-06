@@ -93,7 +93,7 @@ export const config = {
   adminPin,
   webUsername,
   webPassword,
-  publicBaseUrl: (clean('PUBLIC_BASE_URL') || clean('RENDER_EXTERNAL_URL') || 'http://localhost:3001').replace(/\/$/, ''),
+  publicBaseUrl: (clean('https://ecr-wan.onrender.com') || clean('RENDER_EXTERNAL_URL') || 'http://localhost:3001').replace(/\/$/, ''),
 };
 
 export function makeTerminalSettings(record: TerminalRecord): TerminalSettings {
