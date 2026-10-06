@@ -13,6 +13,18 @@ const registry = new TerminalRegistry();
 type RawRequest = Request & { rawBody?: Buffer };
 app.use(express.json({ limit: '256kb', verify: (req, _res, buffer) => { (req as RawRequest).rawBody = Buffer.from(buffer); } }));
 
+app.use((req, res, next) => {
+  if (req.path.startsWith('/v2/terminals/')) {
+    const method = req.method;
+    const requestPath = req.path;
+
+    res.on('finish', () => {
+      console.info(`WAN ${method} ${requestPath} -> HTTP ${res.statusCode}`);
+    });
+  }
+  next();
+});
+
 const money = z.object({
   terminalId: z.string().optional(), amount: z.number().int().positive().max(2_000_000_000),
   currencySymbol: z.string().trim().length(3).transform(value => value.toUpperCase()),
